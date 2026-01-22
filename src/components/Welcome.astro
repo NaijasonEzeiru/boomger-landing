@@ -1,210 +1,141 @@
 ---
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
+import { Image } from "astro:assets";
+import Hero from "./hero.astro";
+import HowItWorks from "./howItWorks.astro";
+import realTime from "../assets/real_time.png";
+import safe from "../assets/safe.png";
+import dating from "../assets/more_than_dating.png";
+import matching from "../assets/matching_simple.png";
+// import carousel from "../assets/desktop-carousel.png";
 ---
 
-<div id="container">
-	<img id="background" src={background.src} alt="" fetchpriority="high" />
-	<main>
-		<section id="hero">
-			<a href="https://astro.build"
-				><img src={astroLogo.src} width="115" height="48" alt="Astro Homepage" /></a
-			>
-			<h1>
-				To get started, open the <code><pre>src/pages</pre></code> directory in your project.
-			</h1>
-			<section id="links">
-				<a class="button" href="https://docs.astro.build">Read our docs</a>
-				<a href="https://astro.build/chat"
-					>Join our Discord <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36"
-						><path
-							fill="currentColor"
-							d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.11 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2a75.57 75.57 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.9-72.15ZM42.45 65.69C36.18 65.69 31 60 31 53s5-12.74 11.43-12.74S54 46 53.89 53s-5.05 12.69-11.44 12.69Zm42.24 0C78.41 65.69 73.25 60 73.25 53s5-12.74 11.44-12.74S96.23 46 96.12 53s-5.04 12.69-11.43 12.69Z"
-						></path></svg
-					>
-				</a>
-			</section>
-		</section>
-	</main>
+<main class="text-[#4D4D4D] mb-36 flex flex-col items-center">
+  <Hero />
+  <!-- Features -->
+  <HowItWorks />
+  <section
+    class="md:bg-none mt-12 flex flex-col md:flex-row mx-6 sm:mx-12 lg:mx-24 max-w-7xl md:gap-6 md:my-28"
+  >
+    <div class="rounded-3xl px-1.5 pt-4.5 bg-[#F9F6FF] md:py-8 pb-21.5 md:px-6">
+      <Image src={realTime} alt="home page" class="w-full" />
+      <h3 class="mb-3 mt-6">Real-time, real people</h3>
+      <p>
+        Meet people who are actually nearby and ready to hang out. Whether it’s
+        coffee, a walk, or a spontaneous plan—Boomger makes it easy.
+      </p>
+    </div>
 
-	<a href="https://astro.build/blog/astro-5/" id="news" class="box">
-		<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"
-			><path
-				d="M24.667 12c1.333 1.414 2 3.192 2 5.334 0 4.62-4.934 5.7-7.334 12C18.444 28.567 18 27.456 18 26c0-4.642 6.667-7.053 6.667-14Zm-5.334-5.333c1.6 1.65 2.4 3.43 2.4 5.333 0 6.602-8.06 7.59-6.4 17.334C13.111 27.787 12 25.564 12 22.666c0-4.434 7.333-8 7.333-16Zm-6-5.333C15.111 3.555 16 5.556 16 7.333c0 8.333-11.333 10.962-5.333 22-3.488-.774-6-4-6-8 0-8.667 8.666-10 8.666-20Z"
-				fill="#111827"></path></svg
-		>
-		<h2>What's New in Astro 5.0?</h2>
-		<p>
-			From content layers to server islands, click to learn more about the new features and
-			improvements in Astro 5.0
-		</p>
-	</a>
-</div>
+    <div
+      class="bg-[#E8E8E8] py-8 px-6 rounded-3xl relative bottom-9 md:bottom-0"
+    >
+      <Image src={dating} alt="" class="w-full" />
+      <h3 class="mb-3 mt-6">More than dating</h3>
+      <p>
+        Boomger isn’t just about dating—it’s about belonging. Join groups based
+        on your interests, city, or lifestyle and meet people naturally.
+      </p>
+    </div>
+  </section>
 
-<style>
-	#background {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		filter: blur(100px);
-	}
+  <!-- Trust/Safety -->
+  <section
+    class="bg-[url(/bg-safe.png)] px-4 rounded-3xl mx-6 sm:mx-12 lg:mx-24 max-w-7xl"
+  >
+    <div
+      class="text-[#E6E6E6] rounded-3xl px-6 pt-9 pb-11 grid md:grid-cols-2 gap-10 items-center"
+    >
+      <div>
+        <h2 class="text-2xl font-semibold mb-4 text-white">
+          Safe, Respectful, and You-First
+        </h2>
+        <p>Your safety and comfort come first.</p>
+        <ul class="space-y-2 my-6">
+          <li>• Verified profiles</li>
+          <li>• Control who sees you</li>
+          <li>• Privacy-first design</li>
+        </ul>
+        <p>Because feeling safe is attractive.</p>
+      </div>
+      <Image src={safe} alt="home page" />
+    </div>
+  </section>
 
-	#container {
-		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-		height: 100%;
-	}
-
-	main {
-		height: 100%;
-		display: flex;
-		justify-content: center;
-	}
-
-	#hero {
-		display: flex;
-		align-items: start;
-		flex-direction: column;
-		justify-content: center;
-		padding: 16px;
-	}
-
-	h1 {
-		font-size: 22px;
-		margin-top: 0.25em;
-	}
-
-	#links {
-		display: flex;
-		gap: 16px;
-	}
-
-	#links a {
-		display: flex;
-		align-items: center;
-		padding: 10px 12px;
-		color: #111827;
-		text-decoration: none;
-		transition: color 0.2s;
-	}
-
-	#links a:hover {
-		color: rgb(78, 80, 86);
-	}
-
-	#links a svg {
-		height: 1em;
-		margin-left: 8px;
-	}
-
-	#links a.button {
-		color: white;
-		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
-		box-shadow:
-			inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-			inset 0 -2px 0 rgba(0, 0, 0, 0.24);
-		border-radius: 10px;
-	}
-
-	#links a.button:hover {
-		color: rgb(230, 230, 230);
-		box-shadow: none;
-	}
-
-	pre {
-		font-family:
-			ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono',
-			monospace;
-		font-weight: normal;
-		background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		margin: 0;
-	}
-
-	h2 {
-		margin: 0 0 1em;
-		font-weight: normal;
-		color: #111827;
-		font-size: 20px;
-	}
-
-	p {
-		color: #4b5563;
-		font-size: 16px;
-		line-height: 24px;
-		letter-spacing: -0.006em;
-		margin: 0;
-	}
-
-	code {
-		display: inline-block;
-		background:
-			linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
-			linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
-		border-radius: 8px;
-		border: 1px solid transparent;
-		padding: 6px 8px;
-	}
-
-	.box {
-		padding: 16px;
-		background: rgba(255, 255, 255, 1);
-		border-radius: 16px;
-		border: 1px solid white;
-	}
-
-	#news {
-		position: absolute;
-		bottom: 16px;
-		right: 16px;
-		max-width: 300px;
-		text-decoration: none;
-		transition: background 0.2s;
-		backdrop-filter: blur(50px);
-	}
-
-	#news:hover {
-		background: rgba(255, 255, 255, 0.55);
-	}
-
-	@media screen and (max-height: 368px) {
-		#news {
-			display: none;
-		}
-	}
-
-	@media screen and (max-width: 768px) {
-		#container {
-			display: flex;
-			flex-direction: column;
-		}
-
-		#hero {
-			display: block;
-			padding-top: 10%;
-		}
-
-		#links {
-			flex-wrap: wrap;
-		}
-
-		#links a.button {
-			padding: 14px 18px;
-		}
-
-		#news {
-			right: 16px;
-			left: 16px;
-			bottom: 2.5rem;
-			max-width: 100%;
-		}
-
-		h1 {
-			line-height: 1.5;
-		}
-	}
-</style>
+  <!-- CTA -->
+  <section
+    class="text-center py-20 w-screen overflow-x-hidden flex flex-col items-center"
+  >
+    <h3 class="mb-2 px-6 max-w-200 lg:mb-0 leading-12">
+      Ready to Meet Someone Who Gets You?
+    </h3>
+    <p class="text-[#4D4D4D] mb-4 lg:mb-8 px-4">
+      Stop swiping. Start connecting.
+    </p>
+    <p class="text-[#524A5F] font-semibold italic">
+      Download the app and start something real.
+    </p>
+    <img
+      src="/desktop-carousel.png"
+      alt=" "
+      class="h-24 mt-6 lg:mt-0 min-w-[120%] lg:w-full lg:h-56 lg:min-w-0 block lg:mx-24 max-w-7xl"
+    />
+    <!-- <div class="flex gap-3 w-screen overflow-x-hidden relative">
+      <div class="flex-1 aspect-3/4 overflow-hidden">
+        <Image src={car1} alt="" class="w-full object-fill" />
+      </div>
+      <div class="flex-1 aspect-3/4 overflow-hidden">
+        <Image src={car2} alt="" class="w-full object-fill" />
+      </div>
+      <div class="flex-1 aspect-3/4 overflow-hidden">
+        <Image src={car3} alt="" class="w-full object-fill" />
+      </div>
+      <div class="flex-1 aspect-3/4 overflow-hidden">
+        <Image src={car4} alt="" class="w-full object-fill" />
+      </div>
+      <div class="flex-1 aspect-3/4 overflow-hidden">
+        <Image src={car5} alt="" class="w-full object-fill" />
+      </div>
+      <div class="flex-1 aspect-3/4 overflow-hidden">
+        <Image src={car6} alt="" class="w-full object-fill" />
+      </div>
+      <div class="flex-1 aspect-3/4 overflow-hidden hidden lg:block">
+        <Image src={car7} alt="" class="w-full object-fill" />
+      </div>
+    </div> -->
+    <a
+      href="#"
+      class="bg-black text-[#F8FAFC] px-6 py-4 rounded-full font-semibold flex items-center gap-1.5 w-fit mx-auto mt-5 lg:mt-0"
+    >
+      Start Something Real <svg
+        fill="#F8FAFC"
+        width="24px"
+        height="24px"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        ><path
+          d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+        ></path></svg
+      >
+    </a>
+  </section>
+  <div
+    class="bg-[url(/simple-matching-bg.png)] bg-cover bg-center px-4 md:px-14 md:pb-0 md:pt-9 py-8.5 flex flex-col md:flex-row text-[#E6E6E6] md:w-[-webkit-fill-available] gap-8.5 mx-6 sm:mx-12 lg:mx-24 max-w-7xl"
+  >
+    <Image
+      src={matching}
+      alt=""
+      class="rounded-3xl md:rounded-b-none md:w-1/2"
+    />
+    <div class="md:self-center">
+      <h4 class="font-semibold text-2xl text-white">We Make Matching Simple</h4>
+      <p class="my-6">
+        Tell us what you’re looking for. We’ll handle the rest.
+      </p>
+      <ul class="space-y-2">
+        <li>• Smart preferences</li>
+        <li>• Custom discovery filters</li>
+        <li>• Intentional matching</li>
+        <li>• No pressure, no awkwardness</li>
+      </ul>
+    </div>
+  </div>
+</main>

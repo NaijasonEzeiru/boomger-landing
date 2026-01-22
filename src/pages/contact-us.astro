@@ -1,0 +1,120 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="About us - Boomger."
+  content="About us - Boomger. - One Night Stand Entertainment, the innovative force behind One Night, the premier dating app designed to connect people for whatever they seek—be it a spark, a relationship, a date, a hookup, or a one-night stand. We are committed to creating an inclusive and dynamic platform that caters to diverse romantic and social needs."
+>
+  <main
+    class="mx-6 sm:mx-12 lg:mx-24 mb-20 max-w-7xl py-12 flex flex-col lg:flex-row gap-22.75 text-lg min-h-[calc(100vh-576px)] items-center md:w-[-webkit-fill-available]"
+  >
+    <div
+      class="border rounded-[20px] pt-6.5 lg:pt-10 lg:pb-20 pb-17.5 px-4 w-full sm:px-8"
+    >
+      <p class="text-2xl sm:text-[32px] mb-7.5 lg:mb-9">
+        Have an inquiry or <br /> complaint? contact US
+      </p>
+      <div class="flex flex-col gap-6">
+        <a
+          class="bg-[#28282B] w-full h-34 text-white flex items-center px-10 justify-between gap-7"
+          href="mailto:info@boomger.com"
+        >
+          <svg
+            width="33"
+            height="27"
+            viewBox="0 0 33 27"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M29.7 0H3.3C1.485 0 0.0165 1.51875 0.0165 3.375L0 23.625C0 25.4813 1.485 27 3.3 27H29.7C31.515 27 33 25.4813 33 23.625V3.375C33 1.51875 31.515 0 29.7 0ZM29.7 6.75L16.5 15.1875L3.3 6.75V3.375L16.5 11.8125L29.7 3.375V6.75Z"
+              fill="white"></path>
+          </svg>
+
+          <p>info@boomger.com</p>
+        </a>
+        <a
+          class="bg-[#28282B] w-full h-34 text-white flex items-center px-10 justify-between gap-7"
+          href="tel:07000039088"
+        >
+          <svg
+            width="35"
+            height="35"
+            viewBox="0 0 35 35"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4.88235 1H12.6471L16.5294 10.7059L11.6765 13.6176C13.7554 17.833 17.167 21.2446 21.3824 23.3235L24.2941 18.4706L34 22.3529V30.1176C34 31.1473 33.591 32.1348 32.8629 32.8629C32.1348 33.591 31.1473 34 30.1176 34C22.5456 33.5398 15.4038 30.3244 10.0397 24.9603C4.67563 19.5962 1.46016 12.4544 1 4.88235C1 3.85269 1.40903 2.8652 2.13711 2.13711C2.8652 1.40903 3.85269 1 4.88235 1Z"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+          <p>070-0003-9088</p>
+        </a>
+        <a
+          class="bg-[#28282B] w-full h-34 text-white flex items-center px-10 justify-between gap-7"
+          href=""
+        >
+          <svg
+            width="35"
+            height="35"
+            viewBox="0 0 35 35"
+            fill="none"
+            class="size-9 block"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4.375 30.625V4.375H26.25V30.625M0 0V35H30.625V26.25L35 21.875L30.625 17.5L35 13.125L30.625 8.75L35 4.375L30.625 0M13.125 13.125L8.75 17.5L13.125 24.0625H17.5L21.875 17.5L17.5 13.125M21.875 13.125L17.5 21.875H13.125L8.75 13.125L13.125 8.75H21.875"
+              fill="white"></path>
+          </svg>
+          <p class="flex-1 text-right">15 Plymouth, United Kingdom, England.</p>
+        </a>
+      </div>
+    </div>
+    <!-- Contact Form -->
+    <section
+      class="bg-white border rounded-2xl px-6 shadow-sm pt-18.25 lg:pt-10 sm:px-10 pb-24 w-full"
+    >
+      <h2 class="text-[32px] font-semibold mb-6">Send a message</h2>
+
+      <form class="space-y-5">
+        <div>
+          <label class="block font-medium mb-1">Your name</label>
+          <input
+            type="text"
+            placeholder="John Doe"
+            class="w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black"
+          />
+        </div>
+
+        <div>
+          <label class="block font-medium mb-1">Your email</label>
+          <input
+            type="email"
+            placeholder="john@example.com"
+            class="w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black"
+          />
+        </div>
+
+        <div>
+          <label class="block font-medium mb-1">Your message</label>
+          <textarea
+            rows="5"
+            placeholder="Write your message here..."
+            class="w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black resize-none"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="bg-black text-white px-6 py-3 rounded-xl font-medium hover:bg-zinc-800 transition w-full"
+        >
+          Send message
+        </button>
+      </form>
+    </section>
+  </main>
+</Layout>

@@ -1,0 +1,66 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/footer-logo.png";
+import tiktok from "../assets/tiktok-icon.png";
+import youtube from "../assets/youtube-icon.png";
+import twitter from "../assets/twitter.png";
+import instagram from "../assets/instagram.png";
+import googlePlay from "../assets/google-play.png";
+import appStore from "../assets/app-store.png";
+import facebook from "../assets/facebook.png";
+---
+
+<footer
+  class="bg-black text-zinc-400 pt-16 pb-6 text-lg w-full flex flex-col items-center"
+>
+  <div
+    class="grid md:grid-cols-3 gap-10 mx-6 sm:mx-12 lg:mx-24 max-w-7xl lg:w-[-webkit-fill-available]"
+  >
+    <a href="/">
+      <Image src={logo} alt="" class="mx-auto lg:mx-0" />
+    </a>
+    <div class="lg:mx-auto">
+      <h4 class="mb-2">Quick Links</h4>
+      <ul class="space-y-2">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about-us">About</a></li>
+        <li><a href="contact-us">Contact</a></li>
+        <li><a href="/guideline">Community Guidelines</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="lg:ml-auto">
+      <h4>Connect With US</h4>
+      <span class="flex gap-6 mt-2.5 mb-3.5 lg:my-6">
+        <a href="">
+          <Image src={youtube} alt="" class="h-9" />
+        </a>
+        <a href="">
+          <Image src={facebook} alt="" class="h-9" />
+        </a>
+        <a href="">
+          <Image src={instagram} alt="" class="h-9" />
+        </a>
+        <a href="">
+          <Image src={twitter} alt="" class="h-9" />
+        </a>
+        <a href="">
+          <Image src={tiktok} alt="" class="h-9" />
+        </a>
+      </span>
+      <span class="flex gap-7">
+        <a href=""
+          ><Image src={googlePlay} alt="" class="px-2.5 py-1.5 h-8 w-24" /></a
+        ><a href=""
+          ><Image src={appStore} alt="" class="px-2.5 py-1.5 h-8 w-24" /></a
+        >
+      </span>
+    </div>
+  </div>
+  <h4 class="px-4 text-center hidden lg:block mt-36">
+    Copyright ©️ 2026 ... All rights reserved.
+  </h4>
+  <p class="px-4 text-center mt-12 lg:hidden font-semibold">
+    © Boomger. All rights reserved.
+  </p>
+</footer>

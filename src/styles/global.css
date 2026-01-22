@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@layer base {
+  h3 {
+    @apply text-[32px] text-[#1A1A1A] font-semibold md:text-[39px] xl:text-[48px];
+  }
+  h4 {
+    @apply text-2xl text-white font-semibold;
+  }
+}

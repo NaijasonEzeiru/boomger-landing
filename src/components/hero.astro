@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import phone from "../assets/on_phone.png";
+---
+
+<section class="bg-[#F9F6FF] rounded-3xl mx-6 sm:mx-12 lg:mx-24 max-w-7xl">
+  <div
+    class="rounded-3xl h-192.25 lg:h-144 bg-contain bg-center bg-[linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url(/hero_bg.png)] text-white flex items-center"
+  >
+    <div class="px-6 lg:px-48 py-24 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        Find your vibe. Find your people. Find your person.
+      </h1>
+      <p class="max-w-2xl mx-auto text-zinc-200 mb-8">
+        Not endless swiping. Just real, meaningful connections, right where you
+        are.
+      </p>
+      <a
+        href="#"
+        class="inline-flex border text-white border-white pr-8 pl-1 py-1 items-center rounded-full font-medium"
+      >
+        <span
+          class="bg-white rounded-full mr-3 size-9 flex items-center justify-center"
+          ><svg
+            fill="#000000"
+            width="24px"
+            height="24px"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+            ></path></svg
+          >
+        </span> Download the App
+      </a>
+    </div>
+  </div>
+  <div class="flex flex-col lg:flex-row lg:mt-28 gap-7 lg:px-24">
+    <div class="mt-10 text-center lg:text-left px-12">
+      <p class="text-xl mt-10">Your Dating, Upgraded</p>
+      <p class="text-[32px] lg:text-5xl font-semibold mt-5">
+        A smarter, more intentional way to connect
+      </p>
+    </div>
+    <Image src={phone} alt="home page" class="mx-auto" />
+  </div>
+</section>

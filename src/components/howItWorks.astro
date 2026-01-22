@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import match from "../assets/match_in_seconds.png";
+---
+
+<div
+  id="howItWorks"
+  class="flex flex-col md:flex-row items-center mt-22.25 gap-4 md:gap-10 px-6 sm:px-12 lg:px-16 max-w-7xl"
+>
+  <Image
+    src={match}
+    alt="home page"
+    class="xl:border-l-20 xl:border-[#D9D9D9] md:bg-[#D9D9D9] rounded-3xl md:w-1/2"
+  />
+  <div class="">
+    <p class="text-xl mb-3 text-center md:text-left">
+      Fast, Fun, and Effortless
+    </p>
+    <h3 class="text-center md:text-left mb-7">Match in seconds</h3>
+    <p class="max-w-136.25">
+      Our smart discovery system shows you people who align with your interests,
+      goals, and location—so every swipe actually matters.
+    </p>
+    <p class="font-semibold mt-4">Less scrolling. More connecting.</p>
+  </div>
+</div>
