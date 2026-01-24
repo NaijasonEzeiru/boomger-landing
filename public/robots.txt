@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Legal pages are indexable but low priority
+Crawl-delay: 5
+
+Sitemap: https://boomger.com/sitemap.xml

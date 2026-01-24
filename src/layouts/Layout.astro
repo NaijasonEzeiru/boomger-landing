@@ -2,13 +2,14 @@
 import "../styles/global.css";
 import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
-const { title, description } = Astro.props;
+const {   title,
+  description,
+  slug,
+  type = "website",
+  noindex = false, } = Astro.props;
 
-// const title = "Boomger – Find Your Person";
-// const description =
-//   "A smarter, more intentional way to connect. Real people, real connections, no endless swiping.";
-const url = "https://boomger.com";
-const image = "/og-image.jpg"; // add later
+const url = "https://boomger.onrender.com/";
+const image = `https://boomger.onrender.com/og/${slug}.png`; // add later
 ---
 
 <!doctype html>
@@ -26,13 +27,13 @@ const image = "/og-image.jpg"; // add later
     <!-- SEO Core -->
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={url} />
+    <link rel="canonical" href={`url${slug}`} />
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
-    <meta property="og:url" content={url} />
+    <meta property="og:url" content={`url${slug}`} />
     <meta property="og:type" content="website" />
 
     <!-- Twitter -->
