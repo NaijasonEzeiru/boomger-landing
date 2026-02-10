@@ -3,9 +3,18 @@ import { Image } from "astro:assets";
 import phone from "../assets/on_phone.png";
 ---
 
-<section class="bg-[#F9F6FF] rounded-3xl mx-6 sm:mx-12 lg:mx-24 max-w-7xl">
+<section class="rounded-3xl mx-6 sm:mx-12 lg:mx-24 max-w-7xl bg-black">
   <div
-    class="rounded-3xl h-192.25 lg:h-144 bg-contain bg-center bg-[linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url(/hero_bg.png)] text-white flex items-center"
+    class="rounded-3xl h-192.25 lg:h-144 text-white
+    flex
+    items-center
+    bg-no-repeat
+    bg-[linear-gradient(rgba(0,0,0,0.88),rgba(0,0,0,0.88)),url('hero-3.png'),url('hero-4.png'),url('hero-5.png')]
+    bg-size-[cover,100%_20%,100%_40%,100%_40%]
+    bg-position-[center,top,center_34%,center_100%]
+    lg:bg-[linear-gradient(rgba(0,0,0,0.88),rgba(0,0,0,0.88)),url('hero_bg.png'),url('hero-2.png')]
+    lg:bg-size-[cover,100%_50%,100%_50%]
+    lg:bg-position-[center,top,bottom]"
   >
     <div class="px-6 lg:px-48 py-24 text-center">
       <h1 class="text-4xl md:text-6xl font-bold mb-6">
@@ -35,13 +44,17 @@ import phone from "../assets/on_phone.png";
       </a>
     </div>
   </div>
-  <div class="flex flex-col xl:flex-row xl:mt-28 gap-7 xl:px-24">
+  <div class="flex flex-col xl:flex-row xl:pt-28 gap-7 xl:px-24 bg-[#F9F6FF]">
     <div class="mt-10 text-center xl:text-left px-4">
       <p class="text-xl mt-10">Your Dating, Upgraded</p>
       <p class="text-[32px] xl:text-5xl font-semibold mt-5">
         A smarter, more intentional way to connect
       </p>
     </div>
-    <Image src={phone} alt="Screenshot of boomger app on phone" class="mx-auto" />
+    <Image
+      src={phone}
+      alt="Screenshot of boomger app on phone"
+      class="mx-auto"
+    />
   </div>
 </section>
